@@ -8,12 +8,19 @@ module.exports = {
 			version: 'detect',
 		},
 	},
-	extends: ['plugin:react/recommended', 'standard', 'eslint-config-prettier'],
+	extends: [
+		'plugin:react/recommended',
+		'standard',
+		'eslint-config-prettier',
+		'plugin:react/jsx-runtime',
+	],
 	overrides: [],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
 	plugins: ['react'],
-	rules: {},
+	rules: {
+		'react/no-unknown-property': 'off',
+	},
 };
